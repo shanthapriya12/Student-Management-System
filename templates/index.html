@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Student Management System</h1>
+
+<p>
+    Manage student records easily.
+</p>
+
+<a href="{{ url_for('add_student') }}">
+    Add Student
+</a>
+
+<br><br>
+
+<a href="{{ url_for('view_students') }}">
+    View Students
+</a>
+
+<br><br>
+
+<a href="{{ url_for('search_student') }}">
+    Search Student
+</a>
+
+{% endblock %}

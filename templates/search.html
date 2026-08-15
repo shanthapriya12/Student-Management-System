@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Search Student</h1>
+
+<form method="POST">
+
+    <label>Enter Roll Number</label>
+
+    <input
+        type="number"
+        name="roll"
+        required
+    >
+
+    <button type="submit">
+        Search
+    </button>
+
+</form>
+
+
+{% if message %}
+
+<p>{{ message }}</p>
+
+{% endif %}
+
+
+{% if student %}
+
+<h2>Student Details</h2>
+
+<p>Roll Number: {{ student[0] }}</p>
+
+<p>Name: {{ student[1] }}</p>
+
+<p>Age: {{ student[2] }}</p>
+
+<p>Department: {{ student[3] }}</p>
+
+<p>Email: {{ student[4] }}</p>
+
+<p>Phone: {{ student[5] }}</p>
+
+{% endif %}
+
+{% endblock %}
